@@ -15,7 +15,7 @@ module.exports = exports = async (connection) => {
       ADD COLUMN IF NOT EXISTS thumb_image text,
       ADD COLUMN IF NOT EXISTS listing_image text,
       ADD COLUMN IF NOT EXISTS single_image text,
-      ADD COLUMN IF NOT EXISTS is_main boolean DEFAULT false`
+      ADD COLUMN IF NOT EXISTS is_main boolean DEFAULT true`
   );
 
   // Drop the uuid column from the product_image table
@@ -45,7 +45,22 @@ module.exports = exports = async (connection) => {
   // Update all the column origin_image in the product_image table to add the '/assets' prefix
   await execute(
     connection,
-    `UPDATE product_image SET origin_image = CONCAT('/assets', origin_image)`
+    `UPDATE product_image SET origin_image = origin_image`
+  );
+
+  await execute(
+    connection,
+    `UPDATE product_image SET thumb_image = origin_image`
+  );
+
+  await execute(
+    connection,
+    `UPDATE product_image SET listing_image = origin_image`
+  );
+
+  await execute(
+    connection,
+    `UPDATE product_image SET single_image = origin_image`
   );
 
   // Add event to the event table for all the product images

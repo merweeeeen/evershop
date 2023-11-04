@@ -4,7 +4,7 @@ import './Logo.scss';
 
 export default function Logo({
   themeConfig: {
-    logo: { src, alt = 'Evershop', width = '128px', height = '128px' }
+    logo: { src = '/assets/album.jpeg', alt = 'Evershop', width = '128px', height = '128px' }
   }
 }) {
   return (
@@ -56,7 +56,7 @@ Logo.propTypes = {
 Logo.defaultProps = {
   themeConfig: {
     logo: {
-      src: '',
+      src: 'https://testbucketcme.s3.ap-southeast-1.amazonaws.com/logo.png',
       alt: 'Evershop',
       width: '128',
       height: '146'

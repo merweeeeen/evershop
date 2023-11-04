@@ -52,7 +52,8 @@ module.exports = exports = async (connection) => {
       price: 100,
       weight: 100,
       status: true,
-      variant_group_id: null
+      variant_group_id: null,
+      category_id: 2
     })
     .execute(connection);
 
@@ -68,13 +69,20 @@ module.exports = exports = async (connection) => {
   await insert('product_description')
     .given({
       product_description_product_id: product1.insertId,
-      name: 'Floral Maxi Dress',
-      url_key: 'floral-maxi-dress',
-      meta_title: 'Floral Maxi Dress',
-      meta_description: 'Floral Maxi Dress',
-      meta_keywords: 'Floral Maxi Dress',
-      description:
-        'Embrace the beauty of nature with our Floral Maxi Dress. This flowing dress features a stunning floral pattern that captures the essence of a blossoming garden. The lightweight fabric ensures comfort and breathability, making it perfect for both casual outings and special occasions. The dress is designed with a cinched waist and a v-neckline for a flattering silhouette. Elevate your style with this elegant and vibrant piece.'
+      name: '1989 Vinyl Record',
+      url_key: '1989-Taylor-Swift-Vinyl-Record',
+      meta_title: '1989 Vinyl Record',
+      meta_description: '1989 Vinyl Record',
+      meta_keywords: '1989 Vinyl Record',
+      description: '1989 Vinyl Record'
+    })
+    .execute(connection);
+
+  await insert('product_image')
+    .given({
+      product_image_product_id: product1.insertId,
+      image:
+        'https://testbucketcme.s3.ap-southeast-1.amazonaws.com/1989taylor.jpeg'
     })
     .execute(connection);
 
@@ -87,7 +95,8 @@ module.exports = exports = async (connection) => {
       price: 120,
       weight: 120,
       status: true,
-      variant_group_id: null
+      variant_group_id: null,
+      category_id: 3
     })
     .execute(connection);
 
@@ -103,13 +112,20 @@ module.exports = exports = async (connection) => {
   await insert('product_description')
     .given({
       product_description_product_id: product2.insertId,
-      name: 'Classic Leather Loafers',
-      url_key: 'classic-leather-loafers',
-      meta_title: 'Classic Leather Loafers',
-      meta_description: 'Classic Leather Loafers',
-      meta_keywords: 'Classic Leather Loafers',
-      description:
-        'Step into timeless elegance with our Classic Leather Loafers. Crafted from premium genuine leather, these loafers offer both style and comfort. The traditional design features a sleek and simple silhouette that pairs effortlessly with both formal and casual attire. The cushioned insole provides all-day support, making these loafers a versatile addition to your footwear collection.'
+      name: 'The Era World Tour T-Shirt',
+      url_key: 'The-Era-World-Tour-T-Shirt',
+      meta_title: 'The Era World Tour T-Shirt',
+      meta_description: 'The Era World Tour T-Shirt',
+      meta_keywords: 'The Era World Tour T-Shirt',
+      description: 'The Era World Tour T-Shirt'
+    })
+    .execute(connection);
+
+  await insert('product_image')
+    .given({
+      product_image_product_id: product2.insertId,
+      image:
+        'https://testbucketcme.s3.ap-southeast-1.amazonaws.com/eraShirt.jpeg'
     })
     .execute(connection);
 
@@ -122,7 +138,8 @@ module.exports = exports = async (connection) => {
       price: 120,
       weight: 120,
       status: true,
-      variant_group_id: null
+      variant_group_id: null,
+      category_id: 3
     })
     .execute(connection);
 
@@ -138,13 +155,20 @@ module.exports = exports = async (connection) => {
   await insert('product_description')
     .given({
       product_description_product_id: product3.insertId,
-      name: 'Denim Skinny Jeans',
-      url_key: 'denim-skinny-jeans',
-      meta_title: 'Denim Skinny Jeans',
-      meta_description: 'Denim Skinny Jeans',
-      meta_keywords: 'Denim Skinny Jeans',
-      description:
-        'Experience the perfect blend of style and comfort with our Denim Skinny Jeans. These jeans are designed to hug your curves while allowing for ease of movement. The high-quality denim fabric offers durability and a flattering fit. The classic five-pocket design adds a touch of versatility, making these jeans a wardrobe staple for various occasions.'
+      name: 'Fearless Baseball Cap',
+      url_key: 'Fearless-Baseball-Cap',
+      meta_title: 'Fearless Baseball Cap',
+      meta_description: 'Fearless Baseball Cap',
+      meta_keywords: 'Fearless Baseball Cap',
+      description: 'Fearless Baseball Cap'
+    })
+    .execute(connection);
+
+  await insert('product_image')
+    .given({
+      product_image_product_id: product3.insertId,
+      image:
+        'https://testbucketcme.s3.ap-southeast-1.amazonaws.com/fearlesscap.png'
     })
     .execute(connection);
 
@@ -157,7 +181,8 @@ module.exports = exports = async (connection) => {
       price: 90,
       weight: 90,
       status: true,
-      variant_group_id: null
+      variant_group_id: null,
+      category_id: 1
     })
     .execute(connection);
 
@@ -173,16 +198,22 @@ module.exports = exports = async (connection) => {
   await insert('product_description')
     .given({
       product_description_product_id: product4.insertId,
-      name: 'Striped Cotton Sweater',
-      url_key: 'striped-cotton-sweater',
-      meta_title: 'Striped Cotton Sweater',
-      meta_description: 'Striped Cotton Sweater',
-      meta_keywords: 'Striped Cotton Sweater',
-      description:
-        "Stay cozy and chic with our Striped Cotton Sweater. This lightweight sweater features a timeless striped pattern that adds a pop of style to your outfit. The breathable cotton fabric makes it an excellent choice for layering during transitional seasons. The relaxed fit and ribbed cuffs ensure a comfortable and flattering look, whether you're lounging at home or going out for a casual day."
+      name: 'RED Album',
+      url_key: 'RED-Album',
+      meta_title: 'RED Album',
+      meta_description: 'RED Album',
+      meta_keywords: 'RED Album',
+      description: 'RED Album'
     })
     .execute(connection);
 
+  await insert('product_image')
+    .given({
+      product_image_product_id: product4.insertId,
+      image:
+        'https://testbucketcme.s3.ap-southeast-1.amazonaws.com/redalbum.jpeg'
+    })
+    .execute(connection);
   // Assign products to the "Featured Products" collection
   await insert('product_collection')
     .given({

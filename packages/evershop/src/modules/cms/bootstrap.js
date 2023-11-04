@@ -4,9 +4,9 @@ module.exports = () => {
   const themeConfig = {
     logo: {
       alt: undefined,
-      src: undefined,
-      width: undefined,
-      height: undefined
+      src: "https://testbucketcme.s3.ap-southeast-1.amazonaws.com/logo.png",
+      width: "50px",
+      height: "50px"
     },
     headTags: {
       links: [],

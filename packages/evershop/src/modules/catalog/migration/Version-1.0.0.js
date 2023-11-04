@@ -402,8 +402,8 @@ module.exports = exports = async (connection) => {
     `CREATE INDEX "FK_CATEGORY_DESCRIPTION" ON "category_description" ("category_description_category_id")`
   );
 
-  // Create 3 default categories, Kids, Men, Women
-  const kids = await insert('category')
+  // Create 3 default categories, Album, Merchandise, Vinyl
+  const Album = await insert('category')
     .given({
       status: 1,
       include_in_nav: 1
@@ -412,17 +412,17 @@ module.exports = exports = async (connection) => {
 
   await insert('category_description')
     .given({
-      category_description_category_id: kids.insertId,
-      name: 'Kids',
-      url_key: 'kids',
-      meta_title: 'Kids',
-      meta_description: 'Kids',
-      meta_keywords: 'Kids',
-      description: 'Kids'
+      category_description_category_id: Album.insertId,
+      name: 'Album',
+      url_key: 'Album',
+      meta_title: 'Album',
+      meta_description: 'Album',
+      meta_keywords: 'Album',
+      description: 'Album'
     })
     .execute(connection);
 
-  const women = await insert('category')
+  const Vinyl = await insert('category')
     .given({
       status: 1,
       include_in_nav: 1
@@ -431,17 +431,17 @@ module.exports = exports = async (connection) => {
 
   await insert('category_description')
     .given({
-      category_description_category_id: women.insertId,
-      name: 'Women',
-      url_key: 'women',
-      meta_title: 'Women',
-      meta_description: 'Women',
-      meta_keywords: 'Women',
-      description: 'Women'
+      category_description_category_id: Vinyl.insertId,
+      name: 'Vinyl',
+      url_key: 'Vinyl',
+      meta_title: 'Vinyl',
+      meta_description: 'Vinyl',
+      meta_keywords: 'Vinyl',
+      description: 'Vinyl'
     })
     .execute(connection);
 
-  const men = await insert('category')
+  const Merchandise = await insert('category')
     .given({
       status: 1,
       include_in_nav: 1
@@ -450,13 +450,13 @@ module.exports = exports = async (connection) => {
 
   await insert('category_description')
     .given({
-      category_description_category_id: men.insertId,
-      name: 'Men',
-      url_key: 'men',
-      meta_title: 'Men',
-      meta_description: 'Men',
-      meta_keywords: 'Men',
-      description: 'Men'
+      category_description_category_id: Merchandise.insertId,
+      name: 'Merchandise',
+      url_key: 'Merchandise',
+      meta_title: 'Merchandise',
+      meta_description: 'Merchandise',
+      meta_keywords: 'Merchandise',
+      description: 'Merchandise'
     })
     .execute(connection);
 

@@ -11,7 +11,7 @@ module.exports = {
         .select('product_description.product_description_id')
         .select('product_description.name')
         .select('product_description.url_key')
-        .select('product.image')
+        .select('product_image.origin_image')
         .select('SUM(cart_item.qty)', 'soldQty')
         .from('product');
       query

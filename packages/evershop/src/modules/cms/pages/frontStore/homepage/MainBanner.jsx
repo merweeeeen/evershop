@@ -5,7 +5,7 @@ import './MainBanner.scss';
 export default function MainBanner() {
   const text = _('Discount ${discount} For All Orders Over ${price}', {
     discount: '20%',
-    price: '$2000'
+    price: '$200'
   });
   return (
     <div className="main-banner-home flex items-center">
@@ -14,8 +14,8 @@ export default function MainBanner() {
         <div className="text-center md:text-left px-2 ">
           <h2 className="h1 ">{text}</h2>
           <p>
-            Use coupon code
-            <span className="font-bold">DISCOUNT20</span>
+            Use coupon code 
+            <span className="font-bold"> DISCOUNT20</span>
           </p>
           <p>{_('Use coupon ${coupon}', { coupon: 'DISCOUNT20' })}</p>
           <p />

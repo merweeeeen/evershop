@@ -7,45 +7,42 @@ export default function FeaturedCategories() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 page-width">
         <div>
           <div className="text-center">
-            <img src="/assets/homepage/banner/men-shoes.jpeg" alt="" />
+            <img src="/assets/album.jpeg" alt="" style={{ height: 225 }} />
           </div>
-          <h3 className="h4 uppercase mt-1 mb-1">Men shoes collection</h3>
+          <h3 className="h4 uppercase mt-1 mb-1">CDs</h3>
           <div className="mb-1">
             <p>
-              Constructed from luxury nylons, leathers, and custom hardware,
-              featuring sport details such as hidden breathing vents, waterproof
-              + antimicrobial linings, and more.
+              Looking for the latest albums of your favourite artists ?
+              Click below to find out more ! 
             </p>
           </div>
-          <Button url="/kids" title="Shop kids" variant="primary" />
+          <Button url="/Album" title="Shop Albums" variant="primary" />
         </div>
         <div>
           <div>
-            <img src="/assets/homepage/banner/women-shoes.jpeg" alt="" />
+            <img src="/assets/vinyl.jpeg" alt="" style={{ height: 225 }} />
           </div>
-          <h3 className="h4 uppercase mt-1 mb-1">Women shoes collection</h3>
+          <h3 className="h4 uppercase mt-1 mb-1">Vinyls</h3>
           <div className="mb-1">
             <p>
-              Constructed from luxury nylons, leathers, and custom hardware,
-              featuring sport details such as hidden breathing vents, waterproof
-              + antimicrobial linings, and more.
+              Finding old records to listen or to add to your collection ?
+              Click below to see more ! 
             </p>
           </div>
-          <Button url="/women" title="Shop women" variant="primary" />
+          <Button url="/vinyl" title="Shop Vinyl" variant="primary" />
         </div>
         <div>
           <div>
-            <img src="/assets/homepage/banner/kid-shoes.jpeg" alt="" />
+            <img src="/assets/shirt.jpeg" alt="" style={{ height: 225 }}/>
           </div>
-          <h3 className="h4 uppercase mt-1 mb-1">Men shoes collection</h3>
+          <h3 className="h4 uppercase mt-1 mb-1">Merchandise</h3>
           <div className="mb-1">
             <p>
-              Constructed from luxury nylons, leathers, and custom hardware,
-              featuring sport details such as hidden breathing vents, waterproof
-              + antimicrobial linings, and more.
+              Looking for merchandise of your favourite artists ?
+              Click here to see more ! 
             </p>
           </div>
-          <Button url="/men" title="Shop men" variant="primary" />
+          <Button url="/merchandise" title="Shop Merch" variant="primary" />
         </div>
       </div>
     </div>
