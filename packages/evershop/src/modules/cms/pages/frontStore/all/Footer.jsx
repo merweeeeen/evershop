@@ -105,7 +105,7 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   themeConfig: {
-    copyRight: '© 2022 Evershop. All Rights Reserved.'
+    copyRight: '© 2023 RetroBeats. All Rights Reserved.'
   }
 };
 

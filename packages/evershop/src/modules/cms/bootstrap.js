@@ -14,7 +14,7 @@ module.exports = () => {
       scripts: [],
       bases: []
     },
-    copyRight: `© 2022 Evershop. All Rights Reserved.`
+    copyRight: `© 2023 RetroBeats. All Rights Reserved.`
   };
   config.util.setModuleDefaults('themeConfig', themeConfig);
   config.util.setModuleDefaults('system', {
