@@ -29,7 +29,7 @@ export default function FeaturedCategories() {
               Click below to see more ! 
             </p>
           </div>
-          <Button url="/vinyl" title="Shop Vinyl" variant="primary" />
+          <Button url="/Vinyl" title="Shop Vinyl" variant="primary" />
         </div>
         <div>
           <div>
@@ -42,7 +42,7 @@ export default function FeaturedCategories() {
               Click here to see more ! 
             </p>
           </div>
-          <Button url="/merchandise" title="Shop Merch" variant="primary" />
+          <Button url="/Merchandise" title="Shop Merch" variant="primary" />
         </div>
       </div>
     </div>
