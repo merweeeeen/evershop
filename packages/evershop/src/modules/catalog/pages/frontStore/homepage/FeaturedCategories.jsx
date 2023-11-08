@@ -7,7 +7,7 @@ export default function FeaturedCategories() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 page-width">
         <div>
           <div className="text-center">
-            <img src="/assets/album.jpeg" alt="" style={{ height: 225 }} />
+            <img src="https://retrobeat-images.s3.ap-southeast-1.amazonaws.com/album.jpeg" alt="" style={{ height: 225 }} />
           </div>
           <h3 className="h4 uppercase mt-1 mb-1">CDs</h3>
           <div className="mb-1">
@@ -20,7 +20,7 @@ export default function FeaturedCategories() {
         </div>
         <div>
           <div>
-            <img src="/assets/vinyl.jpeg" alt="" style={{ height: 225 }} />
+            <img src="https://retrobeat-images.s3.ap-southeast-1.amazonaws.com/vinyl.jpeg" alt="" style={{ height: 225 }} />
           </div>
           <h3 className="h4 uppercase mt-1 mb-1">Vinyls</h3>
           <div className="mb-1">
@@ -33,7 +33,7 @@ export default function FeaturedCategories() {
         </div>
         <div>
           <div>
-            <img src="/assets/shirt.jpeg" alt="" style={{ height: 225 }}/>
+            <img src="https://retrobeat-images.s3.ap-southeast-1.amazonaws.com/shirt.jpeg" alt="" style={{ height: 225 }}/>
           </div>
           <h3 className="h4 uppercase mt-1 mb-1">Merchandise</h3>
           <div className="mb-1">
